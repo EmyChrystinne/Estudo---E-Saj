@@ -1,0 +1,72 @@
+.SideBar {
+  display: flex;
+  padding: 0 20px;
+  background-color: #ececec;
+  flex-wrap: nowrap;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.SideBar a {
+  color: #004960;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.SideBar a:hover {
+  transition: 0.3s; 
+  border-radius: 50px;
+  border: #004960 2px solid;
+}
+
+.SideBar a:active {
+  border-radius: 50px;
+  border: #004960 2px solid;
+}
+
+.SideBar a img {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Sidebar inicialmente oculta no mobile */
+  .SideBar {
+    display: none;
+    position: absolute; /* Para sobrepor o conteúdo */
+    top: 109px;
+    left: 0;
+    width: 80%; /* Ajuste conforme necessário */
+    background-color: #ececec;
+    z-index: 1000; /* Para garantir que fique sobre outros elementos */
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); /* Inicialmente fora da tela */
+    gap: 15px;
+    border-end-end-radius: 20px;
+  }
+
+  /* Mostrar a Sidebar quando ativa */
+  .SideBar.active {
+    padding-top: 10px;
+    display: flex;
+    transform: translateX(0);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

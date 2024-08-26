@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Segoe UI";
+  src: url(../fonts/SEGOEUI.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+page {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 20px;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+content {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  height: 100%;
+}
+
+.SideBar {
+  width: 20%;}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 80%;
+  padding: 20px 0;
+  font-size: 1.4rem;
+  color: #004960;
+  border-bottom: #004960 1px solid;
+  font-weight: 600;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: 40px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 600px;
+  height: 130px;
+  padding: 20px;
+  background-color: #004960;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.card a img{
+  width: 75px;
+  height: 75px;
+}
+
+.card a .text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  width: 80%;
+}
+
+.card a:hover{
+  background-color: #003647;
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  page {
+    flex-direction: column;
+  }
+
+  content {
+    width: 100%;
+  }
+
+  .SideBar {
+    display: none;
+  }
+
+  header {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .card {
+    padding: 0;
+  }
+
+  .card a {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    gap: 10px;
+    padding: 0;
+
+  }
+
+  .card a img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card a h2{
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .card .text p{
+    display: none;
+  }
+  
+}
